@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang = "en-US" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" href = "pr3.css">
+</head>
+  <body>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+<div class = "container">
+  <h1>Image Gallery</h1>
+  <div class = "row">
+    <div class = "col-md-4">
+      <img class = "crop-img" src = "1.png">
+    </div>
+    <div class = "col-md-4">
+      <img class = "crop-img" src = "2.png">
+    </div>
+    <div class = "col-md-4">
+      <img class = "crop-img" src = "3.png">
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-12">
+      <img id = "bigImage" class = "large-img" src = "1.png">
+    </div>
+  </div>
+</div>
+<script>
+  $(".crop-img").click(function(){
+  $("#bigImage").attr('src', 
+    $(this).attr('src'));
+});
+</script>
+  </body>
+</html>
